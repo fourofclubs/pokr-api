@@ -11,7 +11,7 @@ import fj.F;
 import fj.Show;
 import fj.data.List;
 
-public final class Menu<B> {
+@SuppressWarnings("javadoc") public final class Menu<B> {
     public final String prompt;
     private final List<String> items;
     private final F<Integer, B> select;

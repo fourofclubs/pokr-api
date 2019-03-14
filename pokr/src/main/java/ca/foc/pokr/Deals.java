@@ -18,7 +18,7 @@ import fj.data.List;
 import fj.data.Option;
 import fj.data.TreeMap;
 
-public final class Deals {
+@SuppressWarnings("javadoc") public final class Deals {
     public static final TreeMap<Integer, Deal> playerDeals(final Hand hand, final Deck d) {
         return playerDeals(hand, d, players -> deal -> evaluateDeal(players.intValue(), deal));
     }

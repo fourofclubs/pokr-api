@@ -12,7 +12,7 @@ import fj.test.Gen;
 import fj.test.Property;
 import fj.test.runner.PropertyTestRunner;
 
-public final class DeckTest {
+@SuppressWarnings("javadoc") public final class DeckTest {
     static final Gen<Card> arbCard = pickOne(Card.all);
     static final Gen<Deck> arbDeck = someSelectionOf(Card.all.length(), Card.all).map(Deck::deck);
     @SuppressWarnings("boxing") static final Gen<Deck> arbNonEmptyDeck = arbDeck.filter(d -> d.size() > 1);

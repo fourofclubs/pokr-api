@@ -8,7 +8,7 @@ import fj.Equal;
 import fj.Show;
 import fj.data.List;
 
-public final class Deal {
+@SuppressWarnings("javadoc") public final class Deal {
     public static final Equal<Deal> eq = p2Equal(intEqual, listEqual(intEqual)).contramap(d -> p(d.cutAt, d.seconds));
     @SuppressWarnings("boxing") public static final Show<Deal> show = Show.<Deal> showS(d -> {
         final List<String> formattedSeconds =

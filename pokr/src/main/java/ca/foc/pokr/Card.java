@@ -8,17 +8,12 @@ import static fj.P.p;
 import static fj.Show.show;
 import static fj.Show.stringShow;
 import static fj.data.List.arrayList;
-import fj.Equal;
-import fj.F;
-import fj.Hash;
-import fj.Ord;
-import fj.P2;
-import fj.Show;
+import fj.*;
 import fj.data.List;
 import fj.data.Option;
 import fj.data.TreeMap;
 
-public final class Card {
+@SuppressWarnings("javadoc") public final class Card {
     public static final List<Card> all = arrayList(Suit.values()).bind(arrayList(Value.values()), s -> v -> card(v, s));
     public static final Equal<Card> eq;
     public static final Hash<Card> hash;

@@ -13,7 +13,7 @@ import fj.Hash;
 import fj.Show;
 import fj.data.List;
 
-public final class Deck {
+@SuppressWarnings("javadoc") public final class Deck {
     public static final Equal<Deck> eq = listEqual(Card.eq).contramap(d -> d.cards);
     public static final Hash<Deck> hash = listHash(Card.hash).contramap(d -> d.cards);
     public static final Show<Deck> show = listShow(Card.show).contramap(d -> d.cards);

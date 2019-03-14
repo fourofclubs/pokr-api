@@ -28,7 +28,7 @@ import fj.data.NonEmptyList;
 import fj.test.Property;
 import fj.test.runner.PropertyTestRunner;
 
-@RunWith(Suite.class) @SuiteClasses({ FindIndicesTest.class, FindLastIndexTest.class }) public final class UtilsTest {
+@SuppressWarnings("javadoc") @RunWith(Suite.class) @SuiteClasses({ FindIndicesTest.class, FindLastIndexTest.class }) public final class UtilsTest {
     @RunWith(PropertyTestRunner.class) static final class FindIndicesTest {
         static final Property alwaysFalseIsEmpty = property(arbList(arbInteger), as -> prop(checkAlwaysFalseIsEmpty(as)));
         static final Property alwaysTrue = property(arbList(arbInteger), as -> prop(checkAlwaysTrue(as)));

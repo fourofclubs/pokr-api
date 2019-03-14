@@ -16,13 +16,9 @@ import java.io.IOException;
 
 import fj.P;
 import fj.Unit;
-import fj.data.IO;
-import fj.data.IOFunctions;
-import fj.data.IOW;
-import fj.data.Option;
-import fj.data.TreeMap;
+import fj.data.*;
 
-public final class Cli {
+@SuppressWarnings("javadoc") public final class Cli {
     public static void main(final String[] args) throws IOException {
         final Deck d = Deck.micholsonStack();
 

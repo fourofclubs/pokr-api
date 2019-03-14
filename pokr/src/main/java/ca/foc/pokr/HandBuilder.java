@@ -17,7 +17,7 @@ import fj.Show;
 import fj.data.Either;
 import fj.data.List;
 
-public final class HandBuilder {
+@SuppressWarnings("javadoc") public final class HandBuilder {
     private static final HandBuilder buildPair = handBuilder(Value.show, "Pair of ..?", allValues, v -> right(pair(v)));
     private static final HandBuilder buildTwoPair = handBuilder(Value.show, "First value?", allValues, v1 -> left(handBuilder(
             Value.show, "Second value?", allValues.delete(v1, Value.eq), v2 -> right(twoPair(v1, v2)))));
